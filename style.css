@@ -1,0 +1,313 @@
+* {
+  box-sizing: border-box;
+  font-family: "Epilogue", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(0, 0%, 98%);
+}
+.container {
+  max-width: 1440px;
+  max-height: 100vh;
+  position: relative;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: hsl(0, 0%, 8%);
+  padding-top: 10px;
+}
+a:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+nav {
+  margin-right: auto;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+nav ul li {
+  list-style: none;
+  color: hsl(0, 0%, 41%);
+}
+nav ul li a:hover {
+  color: hsl(0, 0%, 41%);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+.login-bar {
+  width: 250px;
+  display: flex;
+  justify-content: space-around;
+}
+.register {
+  border: 2px solid hsl(0, 0%, 8%);
+  border-radius: 10px;
+  padding: 8px;
+  padding-top: 0;
+}
+.mobile-image {
+  display: none;
+}
+.hero-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 100px;
+}
+.destop-image {
+  max-width: 400px;
+  max-height: 100%;
+  object-fit: cover;
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  align-self: center;
+  align-content: center;
+  justify-content: space-around;
+  height: 250px;
+  padding-left: 100px;
+  gap: 30px;
+}
+.text {
+  max-width: 400px;
+}
+.learn-more-btn {
+  border-radius: 15px;
+  color: white;
+  padding: 10px;
+  background: black;
+  align-self: flex-start;
+}
+.learn-more-btn:hover {
+  background: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 8%);
+}
+p {
+  font-size: 18px;
+}
+a {
+  color: hsl(0, 0%, 8%);
+}
+h1,
+h3 {
+  font-weight: 700;
+}
+h1 {
+  font-size: 60px;
+  max-width: 400px;
+}
+.svg {
+  display: flex;
+  justify-content: space-around;
+}
+.svg-images {
+  height: 20px;
+}
+.company-div,
+.features-div {
+  height: 120px;
+  width: 130px;
+  position: absolute;
+  left: 70px;
+  top: 40px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px gray;
+  font-size: 12px;
+  display: none;
+}
+.company-div {
+  left: 16rem;
+  width: 100px;
+  height: 90px;
+}
+.company-div > ul,
+.features-div > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+  gap: 5px;
+  list-style: none;
+  padding-left: 18px;
+  padding-top: 13px;
+}
+.company-div > ul li,
+.features-div > ul li:hover {
+  cursor: pointer;
+}
+.mobile-h1 {
+  display: none;
+}
+.desktop-h1 {
+  display: block;
+}
+.navbar-toggler {
+  display: none;
+}
+.display {
+  display: block;
+}
+@media (max-width: 530px) {
+  .container {
+    max-width: 375px;
+    height: auto;
+    background: hsl(0, 0%, 98%);
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+  }
+  nav ul {
+    display: block;
+    background: hsl(0, 0%, 98%);
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    height: auto;
+    height: 100vh;
+    max-height: 0;
+    overflow: hidden;
+    width: 50%;
+    transition: all ease-in-out 0.5s;
+  }
+
+  nav ul.open {
+    max-height: 100vh;
+  }
+  ul > * {
+    list-style: none;
+    width: 100%;
+    display: inline-block;
+    background: transparent;
+    font-weight: 500;
+    height: 50px;
+    padding-top: 5px;
+    margin-left: 0px;
+    color: black;
+  }
+
+  .login-bar {
+    display: none;
+  }
+  .hero-section {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    width: 95%;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 20px;
+    flex: 1;
+    padding-bottom: 50px;
+  }
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    order: 2;
+    margin-top: 50px;
+    gap: 5px;
+  }
+  .text {
+    max-width: 500px;
+  }
+  .img-div {
+    display: flex;
+    order: 1;
+    width: 100%;
+    margin: 0;
+    object-fit: contain;
+  }
+  .destop-image {
+    display: none;
+  }
+  .mobile-image {
+    display: block;
+    max-width: 375px;
+    height: auto;
+  }
+  .hero-text p,
+  h1 {
+    margin-bottom: 2rem;
+    display: flex;
+  }
+  .mobile-h1 {
+    display: block;
+    font-size: 35px;
+  }
+  .desktop-h1 {
+    display: none;
+  }
+  .learn-more-btn {
+    border-radius: 15px;
+    color: white;
+    padding: 10px;
+    background: black;
+    align-self: center;
+  }
+  .learn-more-btn:hover {
+    background: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 8%);
+  }
+  .company-div,
+  .features-div {
+    height: 60px;
+    width: 100px;
+    position: absolute;
+    right: 65%;
+    box-shadow: none;
+    background-color: transparent;
+    display: none;
+  }
+
+  .nav-container .navbar-toggler {
+    display: block;
+    position: absolute;
+    height: 40px;
+    top: 3px;
+    right: 20px;
+    background: transparent;
+    color: black;
+    outline: none;
+    padding: 0 5px;
+    cursor: pointer;
+  }
+
+  .nav-container .navbar-toggler span,
+  .nav-container .navbar-toggler span::before,
+  .nav-container .navbar-toggler span::after {
+    display: block;
+    content: " ";
+    background: #333;
+    height: 3px;
+    width: 28px;
+    border-radius: 4px;
+    transition: all ease-in-out 0.3s;
+  }
+  .nav-container .navbar-toggler span::before {
+    transform: translateY(-8px);
+  }
+  .nav-container .navbar-toggler span::after {
+    transform: translateY(5px);
+  }
+  .nav-container .navbar-toggler.open-navbar-toggler span {
+    background-color: transparent;
+  }
+  .nav-container .navbar-toggler.open-navbar-toggler span::before {
+    transform: translateY(0px) rotate(45deg);
+  }
+  .nav-container .navbar-toggler.open-navbar-toggler span::after {
+    transform: translateY(-3px) rotate(-45deg);
+  }
+}
