@@ -3,8 +3,8 @@ const menuNav = document.querySelector(".nav ul");
 const navbarLinks = document.querySelectorAll(".nav ul li a");
 const features = document.querySelector("#features");
 const company = document.querySelector("#company");
-const featuresDropDown = document.querySelector(".features-div");
-const companyDropDown = document.querySelector(".company-div");
+const featuresDropDown = document.querySelector("nav ul li ul");
+const companyDropDown = document.querySelector("nav ul #company ul");
 
 navbarToggler.addEventListener("click", toggleNav);
 
@@ -23,6 +23,7 @@ features.addEventListener("click", displayFeatures);
 function displayFeatures() {
   featuresDropDown.classList.toggle("display");
   toggleNav();
+  console.log("this is features");
 }
 company.addEventListener("click", displayCompany);
 function displayCompany() {

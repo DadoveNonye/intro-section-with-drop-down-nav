@@ -52,6 +52,13 @@ nav ul li a:hover {
   padding: 8px;
   padding-top: 0;
 }
+.register a:hover {
+  color: hsl(0, 0%, 98%);
+}
+.register:hover {
+  color: hsl(0, 0%, 98%);
+  background-color: hsl(0, 0%, 8%);
+}
 .mobile-image {
   display: none;
 }
@@ -59,6 +66,7 @@ nav ul li a:hover {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  margin-top: 32px;
   gap: 100px;
 }
 .destop-image {
@@ -87,6 +95,7 @@ nav ul li a:hover {
   background: black;
   align-self: flex-start;
 }
+
 .learn-more-btn:hover {
   background: hsl(0, 0%, 98%);
   color: hsl(0, 0%, 8%);
@@ -112,40 +121,42 @@ h1 {
 .svg-images {
   height: 20px;
 }
-.company-div,
-.features-div {
-  height: 120px;
-  width: 130px;
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li ul {
   position: absolute;
-  left: 70px;
+  left: 0px;
   top: 40px;
+  width: 150px;
+  height: 120px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 1px 1px 10px gray;
   font-size: 12px;
-  display: none;
-}
-.company-div {
-  left: 16rem;
-  width: 100px;
-  height: 90px;
-}
-.company-div > ul,
-.features-div > ul {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  align-items: flex-start;
-  align-content: center;
-  gap: 5px;
-  list-style: none;
-  padding-left: 18px;
-  padding-top: 13px;
+  display: none;
+  padding-left: 12px;
 }
-.company-div > ul li,
-.features-div > ul li:hover {
-  cursor: pointer;
+nav ul #company ul {
+  width: 120px;
+  height: 90px;
+  left: 10px;
+}
+nav ul li ul li a {
+  display: flex;
+  margin: 0 auto;
+  padding-top: 5px;
+  font-size: 14px;
+}
+nav ul #features ul li a {
+  font-size: 14px;
+  padding-top: 5px;
+}
+nav ul li:hover > ul {
+  display: initial;
 }
 .mobile-h1 {
   display: none;
@@ -195,6 +206,16 @@ h1 {
     padding-top: 5px;
     margin-left: 0px;
     color: black;
+  }
+  nav ul li {
+    width: 100%;
+  }
+  nav ul li ul {
+    width: 100%;
+    position: relative;
+    top: 0;
+    box-shadow: none;
+    background-color: hsl(0, 0%, 98%);
   }
 
   .login-bar {
@@ -255,20 +276,11 @@ h1 {
     padding: 10px;
     background: black;
     align-self: center;
+    margin-bottom: 40px;
   }
   .learn-more-btn:hover {
     background: hsl(0, 0%, 98%);
     color: hsl(0, 0%, 8%);
-  }
-  .company-div,
-  .features-div {
-    height: 60px;
-    width: 100px;
-    position: absolute;
-    right: 65%;
-    box-shadow: none;
-    background-color: transparent;
-    display: none;
   }
 
   .nav-container .navbar-toggler {
